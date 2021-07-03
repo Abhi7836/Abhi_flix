@@ -21,7 +21,7 @@ export default function Header() {
           </svg>
         </div>
         <div>
-        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {  } {session.user.name.slice(0,16)}</div>}
+        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {  } {session.user.name.split(" ", 2)}</div>}
         </div>
         <div className="flex justify-end items-center">
         <div>
