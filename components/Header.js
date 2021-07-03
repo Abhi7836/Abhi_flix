@@ -3,6 +3,7 @@ import { signOut, useSession } from "next-auth/client";
 
 export default function Header() {
   const [session, loading] = useSession();
+  console.log(session);
   return (
     <div className="min-w-full">
       <nav className="flex items-center justify-between flex-wrap p-6 mx-5">
@@ -20,7 +21,7 @@ export default function Header() {
           </svg>
         </div>
         <div>
-        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {session.user.name}</div>}
+        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {  } {session.user.name.slice(0,16)}</div>}
         </div>
         <div className="flex justify-end items-center">
         <div>
