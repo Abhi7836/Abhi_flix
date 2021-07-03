@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="min-w-full">
       <nav className="flex items-center justify-between flex-wrap p-6 mx-5">
-        <div className="flex items-center mr-auto mt-2 ">
+        <div className="flex items-center mt-2 ">
           <svg
             viewBox="0 0 111 30"
             className="h-7 sm:h-9 w-34"
@@ -20,6 +20,10 @@ export default function Header() {
           </svg>
         </div>
         <div>
+        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {session.user.name}</div>}
+        </div>
+        <div className="flex justify-end items-center">
+        <div>
           <a
             href="#"
             className="px-4 py-2 border rounded text-white border-white lg:mt-0 mr-5"
@@ -27,12 +31,12 @@ export default function Header() {
             English
           </a>
         </div>
-        <div><Link href="/home">
-          <a
-            className="px-4 py-2 border rounded text-white border-white lg:mt-0 mr-5"
-          >
-            Guest
-          </a></Link>
+        <div>
+          <Link href="/home">
+            <a className="px-4 py-2 border rounded text-white border-white lg:mt-0 mr-5">
+              Guest
+            </a>
+          </Link>
         </div>
         <div>
           {!session && (
@@ -52,6 +56,7 @@ export default function Header() {
               Sign out
             </button>
           )}
+        </div>
         </div>
       </nav>
     </div>
