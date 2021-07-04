@@ -45,7 +45,7 @@ export default function Header() {
           {!session && (
             <>
               <Link href="/signUp">
-                <a className="px-2 sm:px-4 py-2 roundedbg-red-600 mt-4 mr-2">
+                <a className="px-2 sm:px-4 py-2 rounded bg-red-600 mt-4 mr-2">
                   Sign In
                 </a>
               </Link>
