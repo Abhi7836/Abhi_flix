@@ -7,7 +7,6 @@ body {
 .herobackground{
     background-image:linear-gradient(to top,rgba(0,0,0,.8) 20%,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 90%), url(/abhi-flix_bkg.jpg);
     background-size: cover;
-    min-height:100vh;
 }
 .test{
   width:500px;

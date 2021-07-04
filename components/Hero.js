@@ -4,7 +4,7 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <div
-      className="w-full herobackground min-h-full"
+      className="w-full herobackground sm:min-h-screen"
     >
       <Header />
       <div className="flex flex-col items-center justify-center w-full flex-1 pt-32 px-2 sm:px-7 text-center text-white">
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center mt-4">
           <input
             placeholder="Email address"
-            className="bg-white p-3 sm:p-4 min-w-[400px]"
+            className="bg-white p-3 sm:p-4 min-w-[300px] md:min-w-[450px]"
           />
           <button
             onClick={() => signIn()}
