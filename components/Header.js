@@ -6,11 +6,11 @@ export default function Header() {
   console.log(session);
   return (
     <div className="min-w-full">
-      <nav className="flex items-center justify-between flex-wrap p-6 mx-5">
+      <nav className="flex items-center justify-between flex-wrap p-6 sm:mx-5">
         <div className="flex items-center mt-2 ">
           <svg
             viewBox="0 0 111 30"
-            className="h-7 sm:h-9 w-34"
+            className="h-5 sm:h-9 w-34"
             focusable="false"
             fill="#e50914"
           >
@@ -21,29 +21,31 @@ export default function Header() {
           </svg>
         </div>
         <div>
-        {session && <div className="text-white sm:text-2xl text-lg mx-auto">Hi {  } {session.user.name.split(" ", 2)}</div>}
+        {session && <div className="text-white text-base sm:text-2xl text-lg mx-auto">Hi {  } {session.user.name.split(" ", 2)}</div>}
         </div>
-        <div className="flex justify-end items-center">
+        <div className="flex justify-end items-center text-sm md:text-lg text-white">
+        
         <div>
           <a
             href="#"
-            className="px-4 py-2 border rounded text-white border-white lg:mt-0 mr-5"
+            className="px-2 sm:px-4 py-2 border rounded  border-white lg:mt-0 sm:mr-5 mr-2"
           >
             English
           </a>
         </div>
+      {!session && (
         <div>
           <Link href="/home">
-            <a className="px-4 py-2 border rounded text-white border-white lg:mt-0 mr-5">
+            <a className="px-2 sm:px-4 py-2 border rounded border-white lg:mt-0 sm:mr-5 mr-2">
               Guest
             </a>
           </Link>
-        </div>
+        </div>)}
         <div>
           {!session && (
             <>
               <Link href="/signUp">
-                <a className="px-4 py-2 rounded text-white bg-red-600 mt-4">
+                <a className="px-2 sm:px-4 py-2 roundedbg-red-600 mt-4 mr-2">
                   Sign In
                 </a>
               </Link>
@@ -51,7 +53,7 @@ export default function Header() {
           )}
           {session && (
             <button
-              className="px-4 py-2 rounded text-white bg-red-600"
+              className="px-2 sm:px-4 py-2 rounded bg-red-600 mr-2"
               onClick={() => signOut()}
             >
               Sign out
